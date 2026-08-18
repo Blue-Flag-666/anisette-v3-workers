@@ -1,0 +1,16 @@
+{
+  "name": "anisette-v3-workers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "check": "tsc --noEmit",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260818.1",
+    "typescript": "5.9.2",
+    "wrangler": "4.123.0"
+  }
+}

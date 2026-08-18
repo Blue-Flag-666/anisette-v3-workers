@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "anisette-v3-workers",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-18",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [
+    {
+      "type": "CompiledWasm",
+      "globs": ["**/*.wasm"],
+      "fallthrough": true
+    }
+  ],
+  "assets": {
+    "directory": ".build/assets",
+    "binding": "ASSETS",
+    "run_worker_first": ["/*"]
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "V1_MACHINE", "class_name": "V1Machine" },
+      { "name": "V3_SESSIONS", "class_name": "V3Session" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["V1Machine", "V3Session"]
+    }
+  ]
+}

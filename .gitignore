@@ -1,0 +1,13 @@
+node_modules/
+.npm-cache/
+.pnpm-cache/
+.wrangler/
+.wrangler-config/
+.build/
+dist/
+*.wasm
+!src/vendor/anisette.wasm
+*.so
+*.a
+applemusic.apk
+*.tsbuildinfo
