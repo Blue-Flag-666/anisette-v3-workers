@@ -1,7 +1,7 @@
 import { createAnisette, createCoreAdiSession, serializeState, type PersistedState } from "./anisette/runtime.js";
 import { fromBase64, toBase64 } from "./anisette/utils.js";
 
-export const CLIENT_INFO = "<MacBookPro13,2> <macOS;13.1;22C65> <com.apple.AuthKit/1 (com.apple.dt.Xcode/3594.4.19)>";
+export const CLIENT_INFO = "<MacBookPro13,2> <macOS;13.1;22C65> <com.apple.AuthKit/1 (com.apple.akd/1.0)>";
 export const USER_AGENT = "akd/1.0 CFNetwork/808.1.4";
 export const IMPLEMENTATION_VERSION = "anisette-v3-workers source";
 const MD_RINFO = "17106176";
